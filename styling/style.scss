@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#its_a_blog {
+    $lightblue: #99ccff;
+    $light1: #f0f0f5;
+    $light2: #e0e0eb;
+    $light3: #d0d0e1;
+    $dark1: #1a1a1a;
+    $dark2: #333333;
+    $dark3: #4d4d4d;
+
+    position: absolute;
+    top: 0;
+    background: $dark1;
+    font-family: sans-serif;
+    color: $light1;
+
+
+    img.full {
+        width: 100%;
+    }
+
+    img.half {
+        width: 50%;
+    }
+
+    img.round {
+        border-radius: 100%;
+    }
+
+    a {
+        color: $lightblue;
+        text-decoration: none;
+        background: $dark3;
+        padding: 0.3em 1em;
+        display: inline-block;
+        border-radius: 20px;
+    }
+    a:hover {
+        color: darken($lightblue, 15%);
+    }
+    a.active {
+        background: $dark1;
+    }
+
+    header {
+        text-align: center;
+        background: linear-gradient(to top right, $dark1, $dark3);
+        padding: 2em;
+        border-bottom: 5px solid $light3;
+        font-family: 'Kalam';
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+    }
+
+    blockquote {
+        background: $light3;
+        color: black;
+        margin: 0;
+        font-family: 'Kalam';
+        text-align: center;
+        margin: 50px 0;
+        
+        h4::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f10d";
+        }
+        h4 {
+            margin: 0;
+            font-size: 2em;
+            padding: 2em;
+        }
+        h4::after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f10e";
+        }
+    }
+
+    #posts > figure {
+        text-align: center;
+        min-width: 300px;
+        max-width: 90%;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 3fr 10fr 4fr;
+        grid-gap: 5vw;
+        justify-content: center;
+        background: linear-gradient(to bottom, $dark1, $dark2);
+        padding: 2em 1em;
+        font-family: 'Karla';
+
+        & > * {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        aside:first-child {
+            grid-column: 1 / span 1;
+            justify-content: flex-start;
+            
+            & > * {
+                border-right: 3px solid $light2;
+                padding-right: 5px;
+            }
+        }
+
+        main {
+            grid-column: 2 / span 1;
+        }
+
+        aside:last-child {
+            grid-column: 3 / span 1;
+            justify-content: flex-end;
+            text-align: center;
+            
+            & > * {
+                border-left: 3px solid $light2;
+                padding-left: 5px;
+            }
+        }
+
+        figure {
+            width: 80%;
+            text-align: center;
+    
+            img {
+                width: 100%;
+            }
+        }
+
+        h3 {
+            font-family: 'Comfortaa';
+            padding: 1em;
+            background: linear-gradient(to top right, $dark2, $dark3);
+            margin: 0;
+        }
+
+        br {
+            height: 1em;
+        }
+    }
+
+    
+
+    
+    
+}
